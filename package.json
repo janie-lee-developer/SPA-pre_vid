@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "build:dev": "npm run build -- --mode=development --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:dev": "nodemon server"
+    "start:dev": "nodemon server --ignore src/ --ignore dist/ & npm run build:dev"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,9 @@
     "sequelize": "^6.16.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "axios": "^0.26.0",
+    "nodemon": "^2.0.15",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
   }
 }

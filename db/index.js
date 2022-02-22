@@ -28,7 +28,7 @@ const Sale = conn.define('sale', {
     },
     extendedWarranty: {
         type: BOOLEAN,
-        defaultValue: true
+        defaultValue: false
     }
 });
 
